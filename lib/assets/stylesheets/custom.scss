@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,500');
+
+html, body { font-weight: 300; }
+a {
+  -webkit-transition: all .6s;
+  transition: all .6s
+}
+
+.debug { border: 1px solid red; }
+
+.navbar-default { border-bottom: 1px solid $gray-light; }
+.btn-navbar { border-left: 1px solid $gray-light; }
+.navbar-nav { border-right: 1px solid $gray-light; }
+.navbar-brand {
+  padding: 0px;
+  opacity: 1;
+  &:hover {
+    opacity: 0.2;
+  }
+  img {
+    margin-top: 22px;
+  }
+}
