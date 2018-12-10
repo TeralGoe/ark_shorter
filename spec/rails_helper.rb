@@ -29,7 +29,8 @@ RSpec.configure do |config|
   config.use_transactional_fixtures = false
   config.infer_spec_type_from_file_location!
   config.filter_rails_from_backtrace!
-  # Add FactoryBot methods
+  # Additional methods
+  config.include RequestSpecHelper, type: :request
   config.include FactoryBot::Syntax::Methods
   # Set of strategies for cleaning database
   config.before(:suite) do

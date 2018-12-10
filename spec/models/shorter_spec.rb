@@ -14,6 +14,10 @@ RSpec.describe Shorter, type: :model do
     end
   end
 
+  describe 'callbacks' do
+    it { should callback(:generate_data).before(:create) }
+  end
+
   describe '#purifying' do
     context 'when url is purified' do
       it 'returns url' do
@@ -29,9 +33,5 @@ RSpec.describe Shorter, type: :model do
         expect(dublicate.check_for_duplicates).to eq(dublicate)
       end
     end
-  end
-
-  describe 'callbacks' do
-    it { should callback(:generate_data).before(:create) }
   end
 end
