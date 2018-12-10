@@ -14,6 +14,11 @@ module Api
       json_response(@shorter, :created)
     end
 
+    def show
+      @shorter = Shorter.find_by!(code: params[:code])
+      json_response(@shorter)
+    end
+
     private
 
       def shorter_params
