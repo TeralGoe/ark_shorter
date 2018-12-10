@@ -7,5 +7,6 @@ Rails.application.routes.draw do
 
   namespace :api, defaults: { format: :json } do
     resources :shorters, only: %i[index show create], param: :code
+    resources :visitors, only: :index
   end
 end
