@@ -1,6 +1,9 @@
 module Api
   # Cm
-  class ShortersController < ApplicationController
+  class ShortersController < ActionController::API
+    include Response
+    include ExceptionHandler
+
     def index
       @shorters = Shorter.all
       json_response(@shorters)

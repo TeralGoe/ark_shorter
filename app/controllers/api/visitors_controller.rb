@@ -1,6 +1,9 @@
 module Api
   # Cm
-  class VisitorsController < ApplicationController
+  class VisitorsController < ActionController::API
+    include Response
+    include ExceptionHandler
+
     def index
       @visitors = Visitor.all
       json_response(@visitors)
