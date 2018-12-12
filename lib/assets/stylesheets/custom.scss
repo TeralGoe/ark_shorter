@@ -1,16 +1,50 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,500');
 
 html, body { font-weight: 300; }
-a {
+
+a, input, button {
   -webkit-transition: all .6s;
   transition: all .6s
 }
 
-.debug { border: 1px solid red; }
+:focus {
+  outline-color: transparent;
+  outline-style: none;
+}
 
+@mixin placeholder {
+  &::-webkit-input-placeholder {@content}
+  &:-moz-placeholder           {@content}
+  &::-moz-placeholder          {@content}
+  &:-ms-input-placeholder      {@content}
+}
+
+input { @include placeholder {
+    font-family: $font-family-base;
+    color: $transparent-light;
+    -webkit-transition: all .6s;
+    transition: all .6s
+}}
+
+input:hover { @include placeholder {
+    color: $text-color;
+}}
+
+.debug { border: 1px solid red; }
+.left { text-align: left; }
+.right { text-align: right; }
+.no-paddings { padding: 0 !important; }
 .navbar-default { border-bottom: 1px solid $gray-light; }
-.btn-navbar { border-left: 1px solid $gray-light; }
 .navbar-nav { border-right: 1px solid $gray-light; }
+.btn-navbar { margin-left: 0.2em; }
+
+.navbar-right {
+  li {
+    border-left: 1px solid $gray-light;
+    padding-right: 0.2em;
+  }
+}
+
 .navbar-brand {
   padding: 0px;
   opacity: 1;
@@ -19,5 +53,44 @@ a {
   }
   img {
     margin-top: 22px;
+  }
+}
+
+.shorter-box { 
+  margin-top: 38vh;
+}
+
+.form-input {
+  background-color: transparent;
+  border: 1px solid $gray-light;
+  position: relative;
+  display: block;
+  color: $text-color;
+  width: 100%;
+  padding: 1em;
+}
+
+.form-button {
+  background-color: $gray-light;
+  border: 1px solid $gray-light;
+  border-left: none;
+  position: relative;
+  display: block;
+  color: $text-color;
+  width: 100%;
+  padding: 1em;
+  &:hover {
+    background-color: $body-bg;
+  }
+}
+
+.shorter-info {
+  padding-top: 1em;
+  padding-left: 0;
+  a {
+    color: $transparent-light;
+    &:hover {
+      color: $text-color;
+    }
   }
 }
