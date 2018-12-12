@@ -1,0 +1,13 @@
+.container-fluid.shorter-box
+  .row
+    = form_for @shorter, url: shorters_path do |f|
+      .col-md-10.col-xs-9.no-paddings
+        = f.text_field :original_url, class: 'form-input', placeholder: 'Paste URL here'
+      .col-md-2.col-xs-3.no-paddings.right
+        = f.button '[ shorten ]', class: 'form-button'
+
+- if flash[:error].present?
+  .shorter-info
+    &mdash;
+    = raw flash[:error]
+

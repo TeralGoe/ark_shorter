@@ -1,0 +1,10 @@
+.container-fluid.shorter-box
+  .row
+    .col-md-10.col-xs-9.no-paddings
+      = text_field_tag 'shorter', "#{request.base_url}/#{shorter.code}", class: 'form-input'
+    .col-md-2.col-xs-3.no-paddings.right
+      = submit_tag '[ copy ]', class: 'form-button'
+
+  .shorter-info
+    &mdash; Your link is shortened: 
+    = link_to '[ visit ]', "#{request.base_url}/#{shorter.code}", target: '_blank'
