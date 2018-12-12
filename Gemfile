@@ -47,6 +47,7 @@ group :test do
   gem 'database_cleaner'
   gem 'factory_bot_rails', '~> 4.11'
   gem 'faker', '~> 1.9'
+  gem 'rails-controller-testing'
   gem 'selenium-webdriver'
   gem 'shoulda-callback-matchers', '~> 1.1'
   gem 'shoulda-matchers', '~> 3.1'
