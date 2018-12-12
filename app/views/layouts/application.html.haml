@@ -17,12 +17,12 @@
 
     %nav.navbar.navbar-default
       .container
-        .col-xs-6
+        .col-md-6.col-xs-12
           = link_to image_tag('logo.svg', height: 35), root_path, class: 'navbar-brand'
-        .col-xs-6
+        .col-md-6.hidden-xs
           %ul.nav.navbar-nav.navbar-right
             %li
-              = link_to '[ api_doc ]', '#', class: 'btn-navbar'
+              = link_to '[ api_doc ]', docs_path, class: 'btn-navbar'
             %li
               = link_to '[ source ]', 'https://github.com/TeralGoe/ark_shorter', class: 'btn-navbar', target: '_blank'
 
