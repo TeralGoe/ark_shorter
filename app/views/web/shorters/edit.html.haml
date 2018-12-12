@@ -1,9 +1,13 @@
+- content_for :js_view do
+  :javascript
+    var clipboard = new ClipboardJS('.form-button');
+
 .container-fluid.shorter-box
   .row
     .col-md-10.col-xs-9.no-paddings
       = text_field_tag 'shorter', "#{request.base_url}/#{shorter.code}", class: 'form-input'
     .col-md-2.col-xs-3.no-paddings.right
-      = submit_tag '[ copy ]', class: 'form-button'
+      = submit_tag '[ copy ]', class: 'form-button', data: { 'clipboard-action': 'copy', 'clipboard-target': '#shorter' }
 
   .shorter-info
     &mdash; Your link is shortened: 
