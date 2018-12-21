@@ -13,6 +13,11 @@ class Shorter < ApplicationRecord
     original_url.downcase.gsub(%r{(https?:\/\/)|(http?:\/\/)|(www\.)}, '')
   end
 
+  def tracking(data)
+    country = data.country || 'unknown'
+    visitors.create(ip: data.ip, country: country)
+  end
+
   private
 
     def generate_data
