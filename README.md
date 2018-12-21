@@ -51,7 +51,7 @@ Coverage results report is available in the folder `coverage/index.html` after e
         "original_url": "https://foo.bar/Doe",
         "purified_url": "foo.bar/doe",
         "visitors": []
-      },
+      }
     ]
     ```
 
@@ -83,7 +83,7 @@ Coverage results report is available in the folder `coverage/index.html` after e
     ```
     [
       {
-        "error": "Oh no! URL format is invalid.",
+        "error": "Oh no! URL format is invalid"
       }
     ]
     ```
@@ -108,7 +108,7 @@ Coverage results report is available in the folder `coverage/index.html` after e
           {
             "ip": "127.0.0.1",
             "country": "RU",
-            "visit_time": "2018-12-21T16:56:19.338Z",
+            "visit_time": "2018-12-21T16:56:19.338Z"
           }
         ]
       }
@@ -122,7 +122,7 @@ Coverage results report is available in the folder `coverage/index.html` after e
     ```
     [
       {
-        "error": "Couldn't find Shorter.",
+        "error": "Couldn't find Shorter"
       }
     ]
     ```
@@ -143,13 +143,13 @@ Coverage results report is available in the folder `coverage/index.html` after e
         "shorter": "CN1pG1",
         "ip": "8.8.8.8",
         "country": "US",
-        "visit_time": "2018-12-12T18:30:19.675Z",
+        "visit_time": "2018-12-12T18:30:19.675Z"
       },
       {
         "shorter": "CN1pG1",
         "ip": "8.8.4.4",
         "country": "RU",
-        "visit_time": "2018-12-21T16:56:19.338Z",
+        "visit_time": "2018-12-21T16:56:19.338Z"
       }
     ]
     ```
