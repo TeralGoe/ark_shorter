@@ -37,4 +37,24 @@ RSpec.describe 'Web::Shorters controller', type: :request do
       end
     end
   end
+
+  # Shorter redirection
+  describe 'GET /:short_code' do
+    context 'when the redirect is completed' do
+      before { get "/#{shorter.code}" }
+
+      it 'create a new visitor and redirect to url' do
+        expect(Visitor.last.shorter).to eql(shorter)
+        response.should redirect_to(shorter.original_url)
+      end
+    end
+
+    context 'when the record does not exist' do
+      before { get '/3.14' }
+
+      it 'redirect to root' do
+        expect(response).to redirect_to(root_path)
+      end
+    end
+  end
 end
