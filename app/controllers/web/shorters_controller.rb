@@ -19,7 +19,13 @@ module Web
       end
     end
 
-    def show; end
+    def show
+      @shorter = Shorter.find_by(code: params[:code])
+      return redirect_to root_path unless @shorter
+
+      @shorter.tracking(request.location)
+      redirect_to @shorter.original_url, status: :moved_permanently
+    end
 
     def edit; end
 
