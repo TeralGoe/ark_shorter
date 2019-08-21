@@ -27,7 +27,7 @@ RSpec.describe 'Web::Shorters controller', type: :request do
     end
 
     context 'when the request is invalid' do
-      before { post '/', params: { shorter: { original_url: Faker::Witcher.location } } }
+      before { post '/', params: { shorter: { original_url: Faker::Books::Dune.planet } } }
 
       it 'returns a validation failure message' do
         expect(response).to redirect_to(root_path)
