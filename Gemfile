@@ -8,7 +8,7 @@ gem 'rails', '~> 5.2.2'
 gem 'bootsnap', '>= 1.1.0', require: false
 gem 'jbuilder', '~> 2.5'
 gem 'jquery-rails', '~> 4.3'
-gem 'puma', '~> 3.11'
+gem 'puma', '~> 4.3'
 gem 'turbolinks', '~> 5'
 gem 'uglifier', '>= 1.3.0'
 
