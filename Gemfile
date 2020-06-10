@@ -20,7 +20,7 @@ gem 'sass-rails', '~> 5.0'
 
 # Stuff
 gem 'active_model_serializers'
-gem 'geocoder', '~> 1.5'
+gem 'geocoder', '~> 1.6'
 
 # Databases
 gem 'pg', group: :production
